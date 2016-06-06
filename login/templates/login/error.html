@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>验证信息</title>
+		<meta charset="UTF-8">
+		<script language = "javascript" type = "text/javascript"> 
+			setTimeout("javascript:clearInterval(mytime);window.history.go(-1);",3000); 
+			function changeSec(){ 
+			document.getElementById("myspan").innerText = parseInt(document.getElementById("myspan").innerText) - 1; 
+			} 
+			var mytime = setInterval("changeSec()",1000); 
+		</script> 
+	</head>
+	<body>
+		{{error_msg}}  <span id = "myspan">3</span> 秒钟后自动返回... 
+	</body>
+</html>

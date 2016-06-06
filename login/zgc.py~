@@ -1,0 +1,16 @@
+import threading
+from time import sleep
+
+import sys
+
+def testSchedule():
+	while (True):
+		sys.stdout.write("test thread\n")
+		sleep(2)
+
+t1 = threading.Thread(target = testSchedule)
+
+def startUpdateDBThread():
+	t1.setDaemon(True)
+	t1.start()
+
